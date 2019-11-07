@@ -1,8 +1,7 @@
-﻿using System;
+﻿using kata.Models.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace kata
 {
@@ -10,6 +9,22 @@ namespace kata
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("OMGHAI!");
+            List<Item> items = Item.SeedDatas().ToList();
+
+            for (var i = 0; i < 31; i++)
+            {
+                Console.WriteLine("-------- day " + i + " --------");
+                Console.WriteLine("name, sellIn, quality");
+                for (var j = 0; j < items.Count; j++)
+                {
+                    System.Console.WriteLine(items[j]);
+                    items[j].UpdateQuality();
+                }
+                Console.WriteLine("");
+            }
+
+            Console.ReadLine();
         }
     }
 }
