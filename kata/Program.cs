@@ -14,7 +14,8 @@ namespace kata
             GildedRose gildedRose = new GildedRose(items);
             gildedRose.Start();
 
-            Console.ReadLine();
+            Console.WriteLine("Press any key to close the application!");
+            Console.ReadKey();
         }
     }
 }
