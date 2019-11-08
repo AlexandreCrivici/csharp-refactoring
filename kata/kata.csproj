@@ -51,8 +51,14 @@
     <Compile Include="Models\Base\Item.cs" />
     <Compile Include="Models\CheeseItem.cs" />
     <Compile Include="Models\ConjuredItem.cs" />
+    <Compile Include="Models\Interface\IUpdateQualityEngine.cs" />
     <Compile Include="Models\LegendaryItem.cs" />
     <Compile Include="Models\NormalItem.cs" />
+    <Compile Include="Models\UpdateQualityEngine\BackStageQualityIncrement.cs" />
+    <Compile Include="Models\UpdateQualityEngine\CheeseQualityIncrement.cs" />
+    <Compile Include="Models\UpdateQualityEngine\ConjuredQualityIncrement.cs" />
+    <Compile Include="Models\UpdateQualityEngine\LegendaryQualityIncrement.cs" />
+    <Compile Include="Models\UpdateQualityEngine\NormalQualityIncrement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

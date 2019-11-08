@@ -1,22 +1,13 @@
 ﻿using kata.Models.Base;
+using kata.Models.UpdateQualityEngine;
 
 namespace kata.Models
 {
     public class CheeseItem : Item
     {
-        public override void UpdateQuality()
+        public CheeseItem()
         {
-            this.SellIn = this.SellIn - 1;
-            if (this.SellIn < 0)
-            {
-                this.Quality = this.Quality + 2;
-            }
-            else
-            {
-                this.Quality = this.Quality + 1;
-            }
-
-            this.Quality = this.Quality >= 50 ? 50 : this.Quality;
+            _updateQualityEngine = new CheeseQualityIncrement();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using kata.Models.Interface;
+using kata.Models.UpdateQualityEngine;
+using System.Collections.Generic;
 
 namespace kata.Models.Base
 {
@@ -8,12 +10,16 @@ namespace kata.Models.Base
         public int SellIn { get; set; }
         public int Quality { get; set; }
 
+        protected IUpdateQualityEngine _updateQualityEngine = new NormalQualityIncrement();
         public override string ToString()
         {
             return string.Format($"{this.Name}, {this.SellIn}, {this.Quality}");
         }
 
-        public abstract void UpdateQuality();
+        public void UpdateQuality()
+        {
+            this.Quality = _updateQualityEngine.UpdateQuality(this.Quality, this.SellIn);
+        }
 
         public static IEnumerable<Item> SeedDatas()
         {
