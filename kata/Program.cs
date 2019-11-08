@@ -1,7 +1,6 @@
 ﻿using kata.Models.Base;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace kata
 {
@@ -10,19 +9,10 @@ namespace kata
         static void Main(string[] args)
         {
             Console.WriteLine("OMGHAI!");
-            List<Item> items = Item.SeedDatas().ToList();
+            IEnumerable<Item> items = Item.SeedDatas();
 
-            for (var i = 0; i < 31; i++)
-            {
-                Console.WriteLine("-------- day " + i + " --------");
-                Console.WriteLine("name, sellIn, quality");
-                for (var j = 0; j < items.Count; j++)
-                {
-                    System.Console.WriteLine(items[j]);
-                    items[j].UpdateQuality();
-                }
-                Console.WriteLine("");
-            }
+            GildedRose gildedRose = new GildedRose(items);
+            gildedRose.Start();
 
             Console.ReadLine();
         }

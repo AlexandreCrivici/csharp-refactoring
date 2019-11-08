@@ -6,7 +6,6 @@ namespace kata.Models.UpdateQualityEngine
     {
         public int UpdateQuality(int oldQuality, int sellIn)
         {
-            sellIn = sellIn - 1;
             if (sellIn < 0)
             {
                 oldQuality = oldQuality + 2;

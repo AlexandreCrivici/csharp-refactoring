@@ -47,13 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\BackStageItem.cs" />
+    <Compile Include="GildedRose.cs" />
+    <Compile Include="Models\ItemType\BackStageItem.cs" />
     <Compile Include="Models\Base\Item.cs" />
-    <Compile Include="Models\CheeseItem.cs" />
-    <Compile Include="Models\ConjuredItem.cs" />
+    <Compile Include="Models\ItemType\CheeseItem.cs" />
+    <Compile Include="Models\ItemType\ConjuredItem.cs" />
     <Compile Include="Models\Interface\IUpdateQualityEngine.cs" />
-    <Compile Include="Models\LegendaryItem.cs" />
-    <Compile Include="Models\NormalItem.cs" />
+    <Compile Include="Models\ItemType\LegendaryItem.cs" />
+    <Compile Include="Models\ItemType\NormalItem.cs" />
     <Compile Include="Models\UpdateQualityEngine\BackStageQualityIncrement.cs" />
     <Compile Include="Models\UpdateQualityEngine\CheeseQualityIncrement.cs" />
     <Compile Include="Models\UpdateQualityEngine\ConjuredQualityIncrement.cs" />
